@@ -1,10 +1,19 @@
 "use strict";
 
 $(document).ready(function(){
-    phoneMaskInit();
+    mainTruckProportionsInit();
+	phoneMaskInit();
     matchHeightInit();
     formsInit();
 });
+
+//Main truck proportions
+function mainTruckProportionsInit() {
+    $(window).on('load resize', function(){
+		var truckHeight = ($('.main__truck').width()) / 1.40648855;
+		$('.main__truck').css('height', truckHeight);
+	});
+}
 
 //Phone mask
 function phoneMaskInit() {
@@ -13,8 +22,9 @@ function phoneMaskInit() {
 
 //Match height
 function matchHeightInit() {
-    //$('.advantage').matchHeight();
-    //$('.profile__inner').matchHeight({byRow: false});
+    $('.solutions__part').matchHeight();
+    $('.how__part').matchHeight();
+    $('.rate').matchHeight();
 }
 
 //Forms

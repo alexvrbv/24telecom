@@ -501,10 +501,18 @@ div.jfilestyle label {
     }
 }
 .navbar-brand {
-    margin: 10px 0;
+    margin: 0;
 	padding: 0;
-	position: relative;
-	top: -5px;
+	position: absolute;
+	top: calc(50% - 17px);
+	left: 0;
+}
+@media (max-width: 1600px) {
+	.navbar-brand {
+		margin: 10px 0;
+		position: relative;
+		top: -5px;
+	}
 }
 @media (max-width: 991px) {
 	.navbar-brand {
@@ -737,6 +745,8 @@ div.jfilestyle label {
 }
 .header__btn {
 	margin-left: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
 	background: transparent;
 	font-weight: 300;
 	text-transform: none;
@@ -755,6 +765,9 @@ div.jfilestyle label {
 	margin-left: 0;
 }
 .header__links {
+	position: absolute;
+	right: 0;
+	top: 18px;
 	padding-top: 10px;
 	padding-bottom: 10px;	
 	display: flex;
@@ -763,6 +776,11 @@ div.jfilestyle label {
 	justify-content: flex-end;
 	align-items: center;
 	align-content: center;
+}
+@media (max-width: 1600px) {
+	.header__links {
+		position: static;
+	}
 }
 @media (max-width: 767px) {
 	.header__links {

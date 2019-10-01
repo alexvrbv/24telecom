@@ -969,15 +969,15 @@ div.jfilestyle label {
 }
 .slick-current .indicator-img-circle__circle-orange--30 {
 	animation: rotate-30 2s linear forwards;
-	animation-delay: 1s;
+	animation-delay: 0.6s;
 }
 .slick-current .indicator-img-circle__circle-orange--40 {
 	animation: rotate-40 2s linear forwards;
-	animation-delay: 1s;
+	animation-delay: 0.6s;
 }
 .slick-current .indicator-img-circle__circle-orange--10 {
 	animation: rotate-10 1s linear forwards;
-	animation-delay: 1s;
+	animation-delay: 0.6s;
 }
 @keyframes rotate-30 {
 	to {

@@ -1451,26 +1451,43 @@ div.jfilestyle label {
 }
 .clouds__item-wrapper--3 {
 	top: 12%;
-	animation: animateCloud 10s linear infinite;
+	animation: animateCloud 13s linear infinite;
+}
+.clouds__item-wrapper--4 {
+	top: 9%;
+	animation: animateCloud 17s linear infinite;
+}
+.clouds__item-wrapper--5 {
+	top: 11%;
+	animation: animateCloud 19s linear infinite;
+}
+.clouds__item-wrapper--6 {
+	top: 13%;
+	animation: animateCloud 22s linear infinite;
 }
 .cloud {
+	width: 500px;
+	height: 200px;	
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: contain;
 }
 .cloud--1 {
-	width: 500px;
-	height: 200px;
 	background-image: url(img/cloud--1.png);
 }
 .cloud--2 {
-	width: 500px;
-	height: 200px;
 	background-image: url(img/cloud--2.png);
 }
 .cloud--3 {
-	width: 500px;
-	height: 200px;
+	background-image: url(img/cloud--3.png);
+}
+.cloud--4 {
+	background-image: url(img/cloud--1.png);
+}
+.cloud--5 {
+	background-image: url(img/cloud--2.png);
+}
+.cloud--6 {
 	background-image: url(img/cloud--3.png);
 }
 .order__form {

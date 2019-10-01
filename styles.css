@@ -1115,9 +1115,13 @@ div.jfilestyle label {
 }
 .truck__area--4 {
 	left: 56%;
-	top: 47%;
+	top: 19%;
 }
 .truck__area--5 {
+	left: 58%;
+	top: 74%;
+}
+.truck__area--6 {
 	right: 0%;
 	top: 60%;
 }

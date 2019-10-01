@@ -1419,6 +1419,59 @@ div.jfilestyle label {
 	padding-top: 70px;
 	padding-bottom: 70px;
 	background: linear-gradient(to bottom, #273e53, #121d2c);
+	position: relative;
+}
+.order__clouds {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+@keyframes animateCloud {
+    0% {
+        margin-left: -500px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+.clouds__item-wrapper {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+.clouds__item-wrapper--1 {
+	top: 8%;
+	animation: animateCloud 20s linear infinite;
+}
+.clouds__item-wrapper--2 {
+	top: 10%;
+	animation: animateCloud 15s linear infinite;
+}
+.clouds__item-wrapper--3 {
+	top: 12%;
+	animation: animateCloud 10s linear infinite;
+}
+.cloud {
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: contain;
+}
+.cloud--1 {
+	width: 500px;
+	height: 200px;
+	background-image: url(img/cloud--1.png);
+}
+.cloud--2 {
+	width: 500px;
+	height: 200px;
+	background-image: url(img/cloud--2.png);
+}
+.cloud--3 {
+	width: 500px;
+	height: 200px;
+	background-image: url(img/cloud--3.png);
 }
 .order__form {
 	margin-top: 45px;

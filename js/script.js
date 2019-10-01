@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
     mainSliderInit();
+    tipsInit();
 	indicatorsRotateInit();
 	mainTruckProportionsInit();
 	phoneMaskInit();
@@ -21,6 +22,60 @@ function mainSliderInit() {
         nextArrow: $('.main__slick-next'),
 		dotsClass: 'main-slider__nav',
 	});
+}
+
+//Tips
+function tipsInit() {
+	$('.hasTooltip').each(function() { // Notice the .each() loop, discussed below
+		$(this).qtip({
+			content: {
+				text: $(this).next('div').next('div'),
+				/*button: 'Закрыть'*/
+			},
+			position: {
+				my: 'bottom left',
+				at: 'top left',
+				target: $(this).next('div'),
+				adjust: {
+					y: -10
+				},
+				container: $('.truck'),
+				viewport: $('.main')
+			},
+			show: {
+				event: 'mouseenter click focus',
+				//delay: 5,
+				solo: true			
+			},
+			hide: {
+				//fixed: true,
+				event: 'unfocus',
+				inactive: 3000
+			},
+			style: {
+				classes: 'truck__area-tip',
+				tip: {
+            		corner: false
+				}
+			},
+			events: {
+				show: function(event, api) {
+					$('.truck').addClass('show-tip-'+$(this)['0']['id']);
+					$('.truck__area-point[aria-describedby='+$(this)['0']['id']+']').parent().removeClass('not-active-area').addClass('active-area');
+					$('.truck__area-line').addClass('hidden');
+					$('.truck__area-point[aria-describedby='+$(this)['0']['id']+']').parent().find('.truck__area-line').addClass('animate');
+					$('.main__mask').addClass('active-'+$(this)['0']['id']);
+				},
+				hide: function(event, api) {
+					$('.truck').removeClass('show-tip-'+$(this)['0']['id']);
+					$('.truck__area-point[aria-describedby='+$(this)['0']['id']+']').parent().removeClass('active-area').addClass('not-active-area');
+					$('.not-active-area .truck__area-line').removeClass('hidden');
+					$('.truck__area-point[aria-describedby='+$(this)['0']['id']+']').parent().find('.truck__area-line').removeClass('animate');
+					$('.main__mask').removeClass('active-'+$(this)['0']['id']);
+				}				
+			}
+		});
+    });	
 }
 
 //IndicatorsRotate

@@ -873,6 +873,18 @@ div.jfilestyle label {
 	background-position: 50% 50%;
 	background-size: cover;
 	border-bottom: 1px solid #f57b20;
+	position: relative;
+}
+.main__mask {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transition:all 0.3s ease-in-out;
+}
+.main__mask[class*=" active-"] {
+	background-color: rgba(0, 0, 0, 0.4);
 }
 .row--main {
 	position: relative;
@@ -927,6 +939,11 @@ div.jfilestyle label {
 }
 .col--main-slider {
 	padding-left: 95px;
+	padding-right: 95px;
+	position: relative;
+}
+.main__title {
+	margin-top: 10px;
 }
 .main-slider-slide__content {
 	margin-top: 70px;
@@ -1058,17 +1075,157 @@ div.jfilestyle label {
 	align-items: center;
 	align-content: center;
 }
-.main__truck {
+.truck {
 	flex: 0 0 100%;
 	max-width: 100%;
 	height: 500px;
+	left: 30px;
+	position: relative;
+}
+.truck:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
 	background-image: url(img/main__truck.png);
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: contain;
+	transition:all 0.3s ease-in-out;
 }
-.main__title {
-	margin-top: 10px;
+.truck[class*=" show-tip-"]:before {
+	opacity: 0.4;
+}
+.truck__area {
+	position: absolute;
+}
+.truck__area--1 {
+	left: 14%;
+	top: 22%;
+}
+.truck__area--2 {
+	left: 22%;
+	top: 65%;
+}
+.truck__area--3 {
+	left: 46%;
+	top: 27%;
+}
+.truck__area--4 {
+	left: 56%;
+	top: 47%;
+}
+.truck__area--5 {
+	right: 0%;
+	top: 60%;
+}
+.truck__area-point {
+	width: 36px;
+	height: 36px;
+	border: 1px solid #ffffff;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+	position: relative;
+	z-index: 5;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.truck[class*=" show-tip-"] .not-active-area .truck__area-point {
+	opacity: 0.5;
+}
+.truck__area-point:before {
+	content: '';
+	position: absolute;
+	left: 9px;
+    top: 9px;
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+.active-area .truck__area-point:before {
+	display: none;
+}
+.truck__area-line {
+	position: absolute;
+	left: -370%;
+	top: calc(-340% + 18px);
+	width: 370%;
+	height: 340%;
+}
+.truck__area-line.hidden {
+	opacity: 0;
+}
+.truck__area-line.hidden.animate {
+	opacity: 1;
+	border-left: none;
+	border-bottom: none;
+}
+.truck__area-line:before {
+	position: absolute;
+	content: '';
+	border-bottom: 1px solid #ffffff;
+	left: 100%;
+	right: 0;
+	bottom: 0;
+}
+.truck__area-line.hidden.animate:before {
+	left: 0%;
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+	transition-duration: 400ms;
+	transition-delay: 200ms;
+}
+.truck__area-line:after {
+	position: absolute;
+	content: '';
+	border-left: 1px solid #ffffff;
+	top: 100%;
+	bottom: 0;
+	left: 0;
+}
+.truck__area-line.hidden.animate:after {
+	top: 0;
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+	transition-duration: 400ms;
+	transition-delay: 600ms;
+}
+.hidden-qtip {
+	display: none;
+}
+.truck__area-tip {
+    border: none;
+	padding: 0 0;
+	font-size: 14px;
+	line-height: 1.2em;
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+	border-radius: 0;
+	min-width: 200px;
+	max-width: 500px;
+	transition:all 0.3s ease-in-out;
+	transition-delay: 800ms;
+}
+.truck__area-tip .qtip-content {
+	padding: 0;
+	overflow: visible;
+}
+.truck__area-tip-content {
+	position: relative;
+	padding-left: 20px;
+}
+.truck__area-tip-content:before {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: 5px;
+	width: 5px;
+	height: 5px;
+	background-color: #ffffff;
+	border-radius: 50%;
 }
 .wrapper--damages {
 	padding-top: 60px;

@@ -1,11 +1,41 @@
 "use strict";
 
 $(document).ready(function(){
-    mainTruckProportionsInit();
+    mainSliderInit();
+	indicatorsRotateInit();
+	mainTruckProportionsInit();
 	phoneMaskInit();
     matchHeightInit();
     formsInit();
 });
+
+//Sliders
+function mainSliderInit() {
+    $('.main-slider').slick({
+        dots: true,
+        infinite: true,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $('.main__slick-prev'),
+        nextArrow: $('.main__slick-next'),
+		dotsClass: 'main-slider__nav',
+	});
+}
+
+//IndicatorsRotate
+function indicatorsRotateInit() {
+	var transform_styles = ['-webkit-transform',
+							'-ms-transform',
+							'transform'];
+	window.randomize = function() {
+		var rotation = Math.floor(Math.random() * 360);
+		for(i in transform_styles) {
+		$('.circle .fill').css(transform_styles[i],
+								'rotate(' + rotation + 'deg)');
+		}
+	}
+}
 
 //Main truck proportions
 function mainTruckProportionsInit() {

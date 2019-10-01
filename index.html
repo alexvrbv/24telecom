@@ -6,6 +6,7 @@
 		<!--<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">-->
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/slick.css" rel="stylesheet" type="text/css">
         <link href="css/jquery-filestyle.min.css" rel="stylesheet" type="text/css">
 		<link href="styles.css" rel="stylesheet" type="text/css">
 	</head>
@@ -64,8 +65,14 @@
         </div>
 		<div class="wrapper wrapper--main main">
 			<div class="container-fluid width-1200">
-				<div class="row">                             
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col--main-slider">
+				<div class="row row--main">
+                    <div class="main__slick-prev">
+                        <img src="img/arrow-left.svg">
+                    </div>
+                    <div class="main__slick-next">
+                        <img src="img/arrow-right.svg">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col--main-slider">
                         <div class="main__breadcrumbs breadcrumbs">
                             <ul>
                                 <li>
@@ -82,11 +89,79 @@
                         <div class="main__title title">
                             <h1>Мониторинг транспорта</h1>
                         </div>
-                        <div class="main__slider">
-
+                        <div class="main__slider main-slider">
+                            <div class="main-slider__slide main-slider-slide">
+                                <div class="main-slider-slide__content">
+                                    <div class="main-slider-slide__indicator">
+                                        <div class="main-slider-slide__indicator-img">
+                                            <svg class="main-slider-slide__indicator-img-circle indicator-img-circle" height="84" width="84">
+                                                <circle class="indicator-img-circle__circle-white" cx="42" cy="42" r="40" />
+                                                <circle class="indicator-img-circle__circle-orange indicator-img-circle__circle-orange--30" cx="42" cy="42" r="40" transform ="rotate(-90, 42,42)" />
+                                            </svg>
+                                            <img src="img/gasoline-pump.svg">
+                                        </div>
+                                        <div class="main-slider-slide__indicator-number">
+                                            <span>30%</span>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider-slide__title">
+                                        <span>Уменьшение расхода топлива</span>
+                                    </div>
+                                    <div class="main-slider-slide__text">
+                                        <span>Установка датчиков уровня топлива, подключение к CAN шине автомобиля и аналитика полученных данных</span>
+                                    </div>
+                                    <a href="#" class="btn main-slider-slide__btn">Заказать</a>
+                                </div>
+                            </div>
+                            <div class="main-slider__slide main-slider-slide">
+                                <div class="main-slider-slide__content">
+                                    <div class="main-slider-slide__indicator">
+                                        <div class="main-slider-slide__indicator-img">
+                                            <svg class="main-slider-slide__indicator-img-circle indicator-img-circle" height="84" width="84">
+                                                <circle class="indicator-img-circle__circle-white" cx="42" cy="42" r="40" />
+                                                <circle class="indicator-img-circle__circle-orange indicator-img-circle__circle-orange--40" cx="42" cy="42" r="40" transform ="rotate(-90, 42,42)" />
+                                            </svg>
+                                            <img src="img/gasoline-pump.svg">
+                                        </div>
+                                        <div class="main-slider-slide__indicator-number">
+                                            <span>40%</span>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider-slide__title">
+                                        <span>Уменьшение расходов на содержание автопарка</span>
+                                    </div>
+                                    <div class="main-slider-slide__text">
+                                        <span>Уменьшение нецелевого использования автомобилей, контроль маршрутов и пробегов, скоростных режимов</span>
+                                    </div>
+                                    <a href="#" class="btn main-slider-slide__btn">Заказать</a>
+                                </div>
+                            </div>
+                            <div class="main-slider__slide main-slider-slide">
+                                <div class="main-slider-slide__content">
+                                    <div class="main-slider-slide__indicator">
+                                        <div class="main-slider-slide__indicator-img">
+                                            <svg class="main-slider-slide__indicator-img-circle indicator-img-circle" height="84" width="84">
+                                                <circle class="indicator-img-circle__circle-white" cx="42" cy="42" r="40" />
+                                                <circle class="indicator-img-circle__circle-orange indicator-img-circle__circle-orange--10" cx="42" cy="42" r="40" transform ="rotate(-90, 42,42)" />
+                                            </svg>
+                                            <img src="img/gasoline-pump.svg">
+                                        </div>
+                                        <div class="main-slider-slide__indicator-number">
+                                            <span>10%</span>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider-slide__title">
+                                        <span>Снижение затрат на техобслуживание</span>
+                                    </div>
+                                    <div class="main-slider-slide__text">
+                                        <span>Контроль ежемесячного обслуживание, контроль использования автомобилей и стилистика вождения</span>
+                                    </div>
+                                    <a href="#" class="btn main-slider-slide__btn">Заказать</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col--main-truck">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col--main-truck">
                         <div class="main__truck">
 
                         </div>
@@ -114,7 +189,7 @@
                             </div>
                             <div class="damage">
                                 <div class="damage__img">
-                                    <img src="img/gasoline-pump.svg">
+                                    <img src="img/pin.svg">
                                 </div>
                                 <div class="damage__text">
                                     <span>Выполнении "левых"<br>рейсов</span>
@@ -122,7 +197,7 @@
                             </div>
                             <div class="damage">
                                 <div class="damage__img">
-                                    <img src="img/gasoline-pump.svg">
+                                    <img src="img/settings.svg">
                                 </div>
                                 <div class="damage__text">
                                     <span>Подкручивании<br>одометра</span>
@@ -130,7 +205,7 @@
                             </div>
                             <div class="damage">
                                 <div class="damage__img">
-                                    <img src="img/gasoline-pump.svg">
+                                    <img src="img/money-bag.svg">
                                 </div>
                                 <div class="damage__text">
                                     <span>Излишнем расходе на<br>обслуживание автопарка</span>
@@ -543,7 +618,8 @@
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>        
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/slick.min.js"></script>
         <script src="js/input.js"></script>        
         <script src="js/jquery.matchHeight-min.js"></script>
         <script src="js/jquery-filestyle.min.js"></script>  

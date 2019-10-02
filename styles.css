@@ -1137,7 +1137,7 @@ div.jfilestyle label {
 	transition: all 0.3s;
 }
 .truck[class*=" show-tip-"] .not-active-area .truck__area-point {
-	opacity: 0.5;
+	opacity: 0.8;
 }
 .truck__area-point:before {
 	content: '';
@@ -1534,6 +1534,33 @@ div.jfilestyle label {
     padding-right: 15px;
 	position: relative;
 }
+.road__sign {
+	position: absolute;
+	bottom: 15px;
+	width: 1px;
+	height: 30%;
+	background-color: rgba(255, 255, 255,0.3);
+}
+.road__sign--1 {
+	left: -220px;
+}
+.road__sign--2 {
+	right: -60px;
+}
+.road__sign:before{
+	content: '';
+	position: absolute;
+	top: -79px;
+	left: -39px;
+	width: 79px;
+	height: 79px;
+	border: 1px solid rgba(255, 255, 255,0.3);
+	border-radius: 50%;
+	background-image: url(img/pin.svg);
+	background-repeat: no-repeat;
+	background-position: 50% 52%;
+	background-size: 22px;
+}
 .road__truck {
 	position: absolute;
 	right: 0;
@@ -1544,6 +1571,7 @@ div.jfilestyle label {
 .road__truck-svg {
 	position: absolute;
 	bottom: 1px;
+	right: 50px;
 }
 .wheel {
 	transform-box: fill-box;

@@ -12,7 +12,10 @@ $(document).ready(function(){
 
 //Sliders
 function mainSliderInit() {
-    $('.main-slider').slick({
+	$('.main-slider').on('init', function(event, slick){
+		animateNumberInit('.slick-current .animate-number');
+	});    
+	$('.main-slider').slick({
         dots: true,
         infinite: true,
         arrows: true,
@@ -21,6 +24,26 @@ function mainSliderInit() {
         prevArrow: $('.main__slick-prev'),
         nextArrow: $('.main__slick-next'),
 		dotsClass: 'main-slider__nav',
+	});
+	$('.main-slider').on('beforeChange', function(event, slick){
+		$('.animate-number').text(0);
+	});
+	$('.main-slider').on('afterChange', function(event, slick){
+		animateNumberInit('.slick-current .animate-number');
+	});
+}
+
+//Animate number
+function animateNumberInit(className) {
+	$(className).each(function() {
+		var num = $(this).data('num');
+		var speed = $(this).data('speed');
+		$(this).animateNumber({
+			number: num
+		},{
+			easing: 'swing',
+			duration: speed
+		});
 	});
 }
 

@@ -297,6 +297,7 @@ h2 {
 	line-height: 1.2em;
 	text-transform: uppercase;
 	font-weight: 900;
+	transition: none;
 }
 @media (max-width: 991px) {
 	.btn {
@@ -305,7 +306,8 @@ h2 {
 }
 .btn:hover,
 .btn:focus {
-	background: transparent;
+	background: #ffffff;
+	color: #f57b20;
 }
 .btn--orange-border {
 	background: transparent;
@@ -315,6 +317,7 @@ h2 {
 	border: 1px solid #eaeaea;
 	color: #959595;
 	background: linear-gradient(to bottom, #f15822, #f57b20);
+	color: #ffffff;
 }
 .btn--header {
 	text-transform: none;
@@ -766,6 +769,7 @@ div.jfilestyle label {
 .header__btn:hover,
 .header__btn:focus {
 	background: linear-gradient(to bottom, #f15822, #f57b20);
+	color: #ffffff;
 }
 .header__btn:first-child {
 	margin-left: 0;
@@ -1089,6 +1093,12 @@ div.jfilestyle label {
 	line-height: 1em;
 	font-weight: 100;
 }
+@media (max-width: 1199px) {
+	.main-slider-slide__indicator-number {
+		font-size: 70px;
+		line-height: 1em;
+	}
+}
 @media (max-width: 480px) {
 	.main-slider-slide__indicator-number {
 		margin-left: 0;
@@ -1098,6 +1108,9 @@ div.jfilestyle label {
 		font-size: 60px;
 		line-height: 1em;
 	}
+}
+.animate-number-target {
+	display: none;
 }
 .main-slider-slide__title {
 	margin-top: 30px;
@@ -1401,7 +1414,7 @@ div.jfilestyle label {
 		max-width: 50%;
 	}
 }
-@media (max-width: 480px) {
+@media (max-width: 360px) {
 	.damage {
 		flex: 0 0 100%;
 		max-width: 100%;
@@ -1563,6 +1576,12 @@ div.jfilestyle label {
 	background: linear-gradient(to bottom, #1c3043, #121d2d);
 	border-bottom: 1px solid #f57b20;
 }
+@media (max-width: 320px) {
+	.col--opportunitiy {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
 .opportunitiy {
 	margin-top: 60px;
 	display: flex;
@@ -1723,9 +1742,9 @@ div.jfilestyle label {
 	top: 0;
 	height: 80%;
 	width: 100%;
-	background: linear-gradient(90deg, #b7babf 50%, transparent 50%);
+	background: linear-gradient(90deg, rgba(255, 255, 255,0.3) 50%, transparent 50%);
 	background-repeat: repeat-x, repeat-x;
-	background-size: 10px 1px;
+	background-size: 40px 1px;
 	animation: border-dance 10s infinite linear;
 	display: flex;
 	flex-direction: row;
@@ -2199,6 +2218,7 @@ div.jfilestyle label {
 .footer__btn:hover,
 .footer__btn:focus {
 	background: linear-gradient(to bottom, #f15822, #f57b20);
+	color: #ffffff;
 }
 .footer__btn:first-child {
 	margin-left: 0;

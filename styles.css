@@ -834,6 +834,10 @@ div.jfilestyle label {
 	align-items: center;
 	align-content: center;
 }
+.header-link:hover .header-link__icon,
+.header-link:focus .header-link__icon {
+	background: linear-gradient(to bottom, #f15822, #f57b20);
+}
 .header-link__icon img {
 	width: 14px;
 	height: 14px;
@@ -843,6 +847,11 @@ div.jfilestyle label {
 	font-size: 12px;
 	line-height: 1.2em;
 	font-weight: 300;
+}
+@media (min-width: 1601px) and (max-width: 1770px) {
+	.header-link__text {
+		display: none;
+	}
 }
 @media (max-width: 767px) {
 	.header-link__text {
